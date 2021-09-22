@@ -26,9 +26,8 @@ mongoose.connect(URI, {
 })
 
 
-app.get('/', (req, res) => {
-    res.json({msg: "Welcome to my app"})
-})
+//connect to routes
+app.use('/user', require('./routes/userRouter'))
 
 
 const PORT = process.env.PORT || 5000
